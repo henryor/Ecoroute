@@ -188,10 +188,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 });
-// Cambiar el color de los nodos en la ruta
-const ruta = [origen, destino]; // Ruta simplificada solo entre origen y destino
 
-// Cambiar color de los nodos en la ruta seleccionada
-ruta.forEach((nodo) => {
-    cy.getElementById(nodo).style("background-color", "red");
-});
