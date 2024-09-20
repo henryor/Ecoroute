@@ -145,35 +145,39 @@ document.addEventListener("DOMContentLoaded", function () {
               {
                   selector: "node",
                   style: {
-                      "background-color": "#1f77b4", // Color de fondo de los nodos
-                      "border-color": "#ffffff", // Color del borde de los nodos
-                      "border-width": 2, // Ancho del borde de los nodos
+
+                    backgroundcolor: "#1f77b4", // Color de fondo de los nodos
+                      bordercolor: "#ffffff", // Color del borde de los nodos
+                      "border-width": 4, // Ancho del borde de los nodos
                       width: "70px", // Ancho de los nodos
                       height: "70px", // Alto de los nodos
                       label: "data(label)", // Etiqueta del nodo
                       "text-valign": "center", // Alineación vertical del texto
                       "text-halign": "center", // Alineación horizontal del texto
                       color: "#ffffff", // Color del texto
-                      "font-size": "14px",
+                      "font-size": "12px",
                       "font-weight": "bold",
                       "text-wrap": "wrap", // Ajustar el texto en el nodo
                       "text-max-width": "50px", // Máximo ancho del texto para evitar desbordamiento
+                      'background-color': '#666',
+                      
                   },
               },
               {
                   selector: "edge",
                   style: {
-                      width: 2,
-                      "line-color": "#b8b8b8",
+                      width: 4,
+                      "line-color": "#666",
                       "target-arrow-color": "#b8b8b8",
-                      "target-arrow-shape": "triangle",
-                      "curve-style": "bezier",
+                      "target-arrow-shape": "none",
+                      "curve-style": "unbundled-bezier",
                       label: "data(label)", // Etiqueta de la línea
                       "font-size": "10px", // Tamaño de la etiqueta
                       "font-weight": "bold", // Peso de la etiqueta
                       color: "#808080", // Color de la etiqueta
                       "text-outline-width": 2,
                       "text-outline-color": "#ffffff",
+                        
                   },
               },
           ],
@@ -183,4 +187,11 @@ document.addEventListener("DOMContentLoaded", function () {
           },
       });
   }
+});
+// Cambiar el color de los nodos en la ruta
+const ruta = [origen, destino]; // Ruta simplificada solo entre origen y destino
+
+// Cambiar color de los nodos en la ruta seleccionada
+ruta.forEach((nodo) => {
+    cy.getElementById(nodo).style("background-color", "red");
 });
