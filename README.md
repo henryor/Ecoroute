@@ -19,4 +19,4 @@ EcoRoute es una aplicación interactiva para calcular la ruta más corta entre v
 
 1. Clona este repositorio en tu máquina local:
    ```bash
-   git clone https://github.com/tu_usuario/eco-route.git
+   git clone https://github.com/henryor/eco-route.git
